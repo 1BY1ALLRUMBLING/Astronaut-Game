@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronaut Game by 1by1</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: #ffeb3b;
+            text-align: center;
+            font-size: 48px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            letter-spacing: 3px;
+        }
+
+        canvas {
+            display: block;
+            margin-top: 30px;
+            border: 3px solid #ffeb3b;
+            box-shadow: 0 0 20px rgba(255, 235, 59, 0.7);
+            border-radius: 10px;
+        }
+
+        #rules {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            width: 80%;
+            text-align: center;
+            color: #eee;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        #rules h2 {
+            font-size: 32px;
+            color: #ffeb3b;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        #rules p {
+            font-size: 18px;
+            line-height: 1.8;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .side-decoration {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 150px;
+            height: 150px;
+        }
+
+        .left-decoration {
+            left: 10px;
+            background-image: url('https://img.icons8.com/color/100/000000/planet.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .right-decoration {
+            right: 10px;
+            background-image: url('https://img.icons8.com/color/100/000000/galaxy.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Astronaut Game by 1by1</h1>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <div class="side-decoration left-decoration"></div>
+    <div class="side-decoration right-decoration"></div>
+
+    <div id="rules">
+        <h2>Game Rules</h2>
+        <p>1. Control the astronaut using the arrow keys to move.</p>
+        <p>2. Use the spacebar to shoot.</p>
+        <p>3. Avoid collisions with asteroids and shoot them to destroy.</p>
+        <p>4. Collect power-ups for speed or invincibility boosts.</p>
+        <p>5. When the boss appears, destroy it to continue the game. Beware of its small asteroids!</p>
+        <p>6. The game ends if the astronaut loses all lives.</p>
+        <p>7. Score as many points as possible!</p>
+    </div>
+
+    <!-- Подключаем файл JavaScript -->
+    <script src="game.js"></script>
+
+</body>
+</html>
